@@ -1,0 +1,310 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.27.0.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 1, 1, LIC=UB430-BV2D6-D1TPR-K6FXZ-87HGM-I5R9L
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.27.0.0
+Toolchain Path:  E:\keil5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.27.0.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+F:\大四上\淘宝板子教程\S82_WIFI+LORA例程1.0\第二章、WiFi实验\bmp180test\USER\WiFi.uvprojx
+Project File Date:  03/05/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'E:\keil5\ARM\ARMCC\Bin'
+Rebuild target 'ESP8266'
+compiling stm32f10x_it.c...
+compiling system_stm32f10x.c...
+compiling main.c...
+main.c(50): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(buff, "SSID:%s", WIFI_SSID);
+main.c(52): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(buff, "PSW:%s", WIFI_PASSWORD);
+main.c(54): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(buff, "IP:%s", WIFI_IP);
+main.c(56): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+      sprintf(buff, "PORT:%d", WIFI_PORT);
+main.c(88): warning:  #223-D: function "strlen" declared implicitly
+  					ESP8266_SendData(buff, strlen(buff));  //wifi模块发送数据
+main.c(26): warning:  #177-D: variable "key"  was declared but never referenced
+      u8 key;
+main.c(28): warning:  #177-D: variable "firstDisplay"  was declared but never referenced
+      u8 firstDisplay=1;
+main.c(29): warning:  #177-D: variable "t"  was declared but never referenced
+      u8 t,h;
+main.c(29): warning:  #177-D: variable "h"  was declared but never referenced
+      u8 t,h;
+main.c(31): warning:  #177-D: variable "p"  was declared but never referenced
+  		u8 p;//气压
+main.c(108): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(str_print_lcd, "温度:%.1f 度", Temperature);
+main.c(110): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(str_print_lcd, "气压:%.03f Kpa", GasPress);
+main.c(113): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+  			sprintf(buff, "温度:%.1f 度,气压:%.03f Kpa\r\n", Temperature,GasPress);
+main.c(115): warning:  #223-D: function "strlen" declared implicitly
+  			uart1_send_buff(buff, strlen(buff));
+main.c: 14 warnings, 0 errors
+compiling led.c...
+compiling key.c...
+compiling spi.c...
+compiling w25qxx.c...
+compiling Lcd_Driver.c...
+compiling GUI.c...
+..\HARDWARE\LCD\GUI.c(230): warning:  #177-D: variable "iWidth"  was declared but never referenced
+  	u8 iWidth = 16;
+..\HARDWARE\LCD\GUI.c(290): warning:  #177-D: variable "k"  was declared but never referenced
+    int i,j,k;
+..\HARDWARE\LCD\GUI.c(325): warning:  #177-D: variable "i"  was declared but never referenced
+  	unsigned char i,j;
+..\HARDWARE\LCD\GUI.c(325): warning:  #177-D: variable "j"  was declared but never referenced
+  	unsigned char i,j;
+..\HARDWARE\LCD\GUI.c(326): warning:  #177-D: variable "k"  was declared but never referenced
+  	unsigned short k,x0;
+..\HARDWARE\LCD\GUI.c(326): warning:  #550-D: variable "x0"  was set but never used
+  	unsigned short k,x0;
+..\HARDWARE\LCD\GUI.c(431): warning:  #223-D: function "DrawPointToBuff" declared implicitly
+            DrawPointToBuff(x+j*8+k, i, fc);
+..\HARDWARE\LCD\GUI.c(435): warning:  #223-D: function "DrawPointToBuff" declared implicitly
+            DrawPointToBuff(x+j*8+k, i, bc);
+..\HARDWARE\LCD\GUI.c(401): warning:  #177-D: variable "iWidth"  was declared but never referenced
+  	u8 iWidth = 16;
+..\HARDWARE\LCD\GUI.c(477): warning:  #223-D: function "DrawPointToBuff" declared implicitly
+          DrawPointToBuff(x+j, i, fc);
+..\HARDWARE\LCD\GUI.c(481): warning:  #223-D: function "DrawPointToBuff" declared implicitly
+          DrawPointToBuff(x+j, i, bc);
+..\HARDWARE\LCD\GUI.c(460): warning:  #177-D: variable "k"  was declared but never referenced
+    int i,j,k;
+..\HARDWARE\LCD\GUI.c(526): warning:  #223-D: function "DrawPointToBuff" declared implicitly
+      DrawPointToBuff(j, i, bc);
+..\HARDWARE\LCD\GUI.c(497): warning:  #177-D: variable "k"  was declared but never referenced
+  	unsigned short k,x0;
+..\HARDWARE\LCD\GUI.c(497): warning:  #177-D: variable "x0"  was declared but never referenced
+  	unsigned short k,x0;
+..\HARDWARE\LCD\GUI.c: 15 warnings, 0 errors
+compiling buzzer.c...
+compiling ds18b20.c...
+..\HARDWARE\DS18B20\ds18b20.c(133): warning:  #550-D: variable "temp"  was set but never used
+    u8 temp;
+..\HARDWARE\DS18B20\ds18b20.c: 1 warning, 0 errors
+compiling esp8266.c...
+..\HARDWARE\WiFi\esp8266.c(176): warning:  #111-D: statement is unreachable
+  	return 0;
+..\HARDWARE\WiFi\esp8266.c(238): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+      len=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(268): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+    ESP8266_Printf((u8*)"END AT:%s",cmd);
+..\HARDWARE\WiFi\esp8266.c(349): warning:  #223-D: function "atoi" declared implicitly
+      id=atoi(ptr);
+..\HARDWARE\WiFi\esp8266.c(382): warning:  #223-D: function "atoi" declared implicitly
+      id=atoi(ptr);
+..\HARDWARE\WiFi\esp8266.c(424): warning:  #223-D: function "atoi" declared implicitly
+        id=atoi(ptr);
+..\HARDWARE\WiFi\esp8266.c(430): warning:  #223-D: function "atoi" declared implicitly
+      esp8266.data_len=atoi(ptr);
+..\HARDWARE\WiFi\esp8266.c(436): warning:  #42-D: operand types are incompatible ("char *" and "u8 *")
+      while(esp8266.curLen<MAX_WIFI_RX_LEN && esp8266.curLen<esp8266.data_len && ptr!=NULL && ((ptr-cmd)<=len))
+..\HARDWARE\WiFi\esp8266.c(436): warning:  #993-D: subtraction of pointer types "char *" and "u8 *" is nonstandard
+      while(esp8266.curLen<MAX_WIFI_RX_LEN && esp8266.curLen<esp8266.data_len && ptr!=NULL && ((ptr-cmd)<=len))
+..\HARDWARE\WiFi\esp8266.c(412): warning:  #177-D: variable "i"  was declared but never referenced
+  		int i=0;
+..\HARDWARE\WiFi\esp8266.c(413): warning:  #550-D: variable "id"  was set but never used
+      u8 id=0;
+..\HARDWARE\WiFi\esp8266.c(503): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+      sprintf(cmd, "AT+CWMODE=%d\r\n",mode);
+..\HARDWARE\WiFi\esp8266.c(504): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+      if(ESP8266_SendAT(cmd,1)==1)
+..\HARDWARE\WiFi\esp8266.c(525): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+          sprintf(cmd, "AT+CWJAP_DEF=\"%s\",\"%s\",\"%s\"\r\n",ssid, pwd, bssid);
+..\HARDWARE\WiFi\esp8266.c(529): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+          sprintf(cmd, "AT+CWJAP_DEF=\"%s\",\"%s\"\r\n",ssid, pwd);
+..\HARDWARE\WiFi\esp8266.c(532): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+        if(ESP8266_SendAT(cmd,1)==1) return 1;
+..\HARDWARE\WiFi\esp8266.c(555): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+        sprintf(cmd, "AT+CWSAP_DEF=\"%s\",\"%s\",%d,%d,4\r\n",ssid, pwd, chl, ecn);
+..\HARDWARE\WiFi\esp8266.c(557): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+        if(ESP8266_SendAT(cmd,1)==1) return 1;
+..\HARDWARE\WiFi\esp8266.c(568): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      if(ip==NULL || strlen(ip)==0) return 0;
+..\HARDWARE\WiFi\esp8266.c(571): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+      sprintf(cmd, "AT+CIPAP_DEF=\"%s\"\r\n",ip);
+..\HARDWARE\WiFi\esp8266.c(573): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+      ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(584): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      if(ip==NULL || strlen(ip)==0) return 0;
+..\HARDWARE\WiFi\esp8266.c(586): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+      sprintf(cmd, "AT+CIPSTA_DEF=\"%s\"\r\n",ip);
+..\HARDWARE\WiFi\esp8266.c(588): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+      ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(605): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+      sprintf(cmd, "AT+CWSTARTSMART=1\r\n");//进入一键配网
+..\HARDWARE\WiFi\esp8266.c(606): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+      ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(617): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+      sprintf(cmd, "AT+CWSTOPSMART\r\n");
+..\HARDWARE\WiFi\esp8266.c(618): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+      ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(644): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+        L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(751): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+      ESP8266_Printf((u8*)"\r\ntrytime=%d.\r\n",trytime);
+..\HARDWARE\WiFi\esp8266.c(777): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+    sprintf(cmd, "AT+CWDHCP_DEF=%d,%d\r\n",mode, en);
+..\HARDWARE\WiFi\esp8266.c(778): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+    return ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(795): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+      sprintf(cmd, "AT+CIPSERVER=1,%d\r\n",port);
+..\HARDWARE\WiFi\esp8266.c(796): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+      return ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(800): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+      sprintf(cmd, "AT+CIPSERVER=0\r\n");//关闭服务器
+..\HARDWARE\WiFi\esp8266.c(801): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+      ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(818): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+    sprintf(cmd, "AT+CIPSTART=\"TCP\",\"%s\",%d\r\n",remoteIp, remotePort);
+..\HARDWARE\WiFi\esp8266.c(819): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+    return ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(833): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+    sprintf(cmd, "AT+CIPSTART=\"UDP\",\"%s\",%d\r\n",remoteIp, remotePort,20);
+..\HARDWARE\WiFi\esp8266.c(833): warning:  #225-D: the format string ends before this argument
+    sprintf(cmd, "AT+CIPSTART=\"UDP\",\"%s\",%d\r\n",remoteIp, remotePort,20);
+..\HARDWARE\WiFi\esp8266.c(834): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+    return ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(842): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+    int len=strlen(esp8266.sta_mac);
+..\HARDWARE\WiFi\esp8266.c(883): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+    u16 L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(914): warning:  #940-D: missing return statement at end of non-void function "ESP8266_reset" 
+  }
+..\HARDWARE\WiFi\esp8266.c(938): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+          L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(950): warning:  #223-D: function "atoi" declared implicitly
+                  len=atoi(ptrIPD+4);
+..\HARDWARE\WiFi\esp8266.c(1020): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+            L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(1046): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+              L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(1090): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+          L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(1119): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+            L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(1158): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+    sprintf(cmd, "AT+CIPCLOSE\r\n");
+..\HARDWARE\WiFi\esp8266.c(1159): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+    return ESP8266_SendAT(cmd,1);
+..\HARDWARE\WiFi\esp8266.c(1179): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+          if(ssid!=NULL) sprintf(esp8266.sta_ssid, "%s", ssid);
+..\HARDWARE\WiFi\esp8266.c(1180): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+          if(password!=NULL) sprintf(esp8266.sta_password, "%s", password);
+..\HARDWARE\WiFi\esp8266.c(1182): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+          if(ip!=NULL) sprintf(esp8266.sta_ip, "%s", ip);//设置STA模式静态IP
+..\HARDWARE\WiFi\esp8266.c(1194): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+          sprintf(esp8266.ap_ssid, "%s", ssid);
+..\HARDWARE\WiFi\esp8266.c(1195): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+          sprintf(esp8266.ap_password, "%s", password);
+..\HARDWARE\WiFi\esp8266.c(1197): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+          if(ip!=NULL) sprintf(esp8266.ap_ip, "%s", ip);//设置AP模式静态IP
+..\HARDWARE\WiFi\esp8266.c(1169): warning:  #177-D: variable "i"  was declared but never referenced
+      u8 i=0;
+..\HARDWARE\WiFi\esp8266.c(1260): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+        if(remoteIp!=NULL) sprintf(esp8266.remoteIp, "%s", remoteIp);
+..\HARDWARE\WiFi\esp8266.c(1266): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+        if(remoteIp!=NULL) sprintf(esp8266.remoteIp, "%s", remoteIp);
+..\HARDWARE\WiFi\esp8266.c(1272): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *restrict"
+        if(remoteIp!=NULL) sprintf(esp8266.remoteIp, "%s", remoteIp);
+..\HARDWARE\WiFi\esp8266.c(1239): warning:  #177-D: variable "i"  was declared but never referenced
+      u8 i=0;
+..\HARDWARE\WiFi\esp8266.c(1300): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "char *"
+        L=ESP8266_GetLine(gAtParseBuff);
+..\HARDWARE\WiFi\esp8266.c(1318): warning:  #223-D: function "atoi" declared implicitly
+                if(ptr!=NULL) esp8266.rssi=atoi(ptr);
+..\HARDWARE\WiFi\esp8266.c(1322): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+              ESP8266_Printf((u8*)"rssi:%d.\r\n",esp8266.rssi);
+..\HARDWARE\WiFi\esp8266.c(1307): warning:  #177-D: variable "index"  was declared but never referenced
+              u8 index=0;
+..\HARDWARE\WiFi\esp8266.c(1354): warning:  #177-D: variable "isConfig"  was declared but never referenced
+    u8 isConfig;
+..\HARDWARE\WiFi\esp8266.c(1355): warning:  #177-D: variable "ssid"  was declared but never referenced
+    u8 ssid[32]={0};  //
+..\HARDWARE\WiFi\esp8266.c(1356): warning:  #177-D: variable "password"  was declared but never referenced
+    u8 password[64]={0};//
+..\HARDWARE\WiFi\esp8266.c(1376): warning:  #177-D: variable "isConfig"  was declared but never referenced
+    u8 isConfig;
+..\HARDWARE\WiFi\esp8266.c(1377): warning:  #177-D: variable "ssid"  was declared but never referenced
+    u8 ssid[32]={0};  //
+..\HARDWARE\WiFi\esp8266.c(1378): warning:  #177-D: variable "password"  was declared but never referenced
+    u8 password[64]={0};//
+..\HARDWARE\WiFi\esp8266.c: 73 warnings, 0 errors
+compiling dht11.c...
+..\HARDWARE\DHT11\dht11.c(110): warning:  #1-D: last line of file ends without a newline
+  }
+..\HARDWARE\DHT11\dht11.c: 1 warning, 0 errors
+compiling BMP180.c...
+..\HARDWARE\BMP180\BMP180.c(23): warning:  #1295-D: Deprecated declaration BMP085_Start - give arg types
+  void BMP085_Start();
+..\HARDWARE\BMP180\BMP180.c(24): warning:  #1295-D: Deprecated declaration BMP085_Stop - give arg types
+  void BMP085_Stop();
+..\HARDWARE\BMP180\BMP180.c(26): warning:  #1295-D: Deprecated declaration BMP085_RecvACK - give arg types
+  uint8  BMP085_RecvACK();
+..\HARDWARE\BMP180\BMP180.c(28): warning:  #1295-D: Deprecated declaration BMP085_RecvByte - give arg types
+  uint8 BMP085_RecvByte();
+..\HARDWARE\BMP180\BMP180.c(103): warning:  #61-D: integer operation result is out of range
+      SDA_R();
+..\HARDWARE\BMP180\BMP180.c(103): warning:  #68-D: integer conversion resulted in a change of sign
+      SDA_R();
+..\HARDWARE\BMP180\BMP180.c(146): warning:  #61-D: integer operation result is out of range
+      SDA_R();
+..\HARDWARE\BMP180\BMP180.c(146): warning:  #68-D: integer conversion resulted in a change of sign
+      SDA_R();
+..\HARDWARE\BMP180\BMP180.c: 8 warnings, 0 errors
+compiling delay.c...
+compiling sys.c...
+compiling usart.c...
+..\SYSTEM\usart\usart.c(98): warning:  #550-D: variable "Res"  was set but never used
+  	u8 Res;
+..\SYSTEM\usart\usart.c: 1 warning, 0 errors
+assembling startup_stm32f10x_hd.s...
+compiling core_cm3.c...
+compiling usart2.c...
+compiling misc.c...
+compiling stm32f10x_fsmc.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_rcc.c...
+compiling stm32f10x_usart.c...
+compiling stm32f10x_tim.c...
+compiling stm32f10x_spi.c...
+linking...
+Program Size: Code=31638 RO-data=994 RW-data=60 ZI-data=21356  
+FromELF: creating hex file...
+"..\OBJ\WiFi.axf" - 0 Error(s), 113 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F1xx_DFP.2.3.0.pack
+                Keil.STM32F1xx_DFP.2.3.0
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_ESP8266
+  E:\keil5\ARM\PACK\Keil\STM32F1xx_DFP\2.3.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
